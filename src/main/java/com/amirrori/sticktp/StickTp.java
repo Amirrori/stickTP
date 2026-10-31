@@ -8,8 +8,15 @@ public final class StickTp extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        Bukkit.getLogger().info("Wyn's plugin tnt enabled.");
-        this.getCommand("magicstick").setExecutor(new MagicStickCommand());
-        Bukkit.getPluginManager().registerEvents(new StickListener(),this);
+        MagicStickItem stick = new MagicStickItem(this);
+        getCommand("magicstick").setExecutor(new MagicStickCommand(stick));
+        
+        getServer().getPluginManager().registerEvents(new StickListener(stick), this);
+
+        getLogger().info("StickTP enabled.");
+
+
+        // this.getCommand("magicstick").setExecutor(new MagicStickCommand());
+        // Bukkit.getPluginManager().registerEvents(new StickListener(),this);
     }
 }
