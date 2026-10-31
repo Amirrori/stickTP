@@ -1,11 +1,18 @@
 name: StickTp
 version: '${project.version}'
-main: sticktp.sticktp.StickTp
-api-version: 1.19
-authors: [ wynnu ]
-description: Wyn's stick tp plugin
+main: com.amirrori.sticktp.StickTp
+api-version: "1.20"
+authors: [ Amirrori ]
+description: Teleports you to the block you're pointing at with a stick.
 commands:
   magicstick:
-    description: gives you a magic stick
+    description: Gives you a magic stick.
     usage: /<command>
-    permission: yourplugin.yourcommandpermission
+    permission: sticktp.magicstick
+permissions:
+  sticktp.magicstick:
+    description: Allows /magicstick.
+    default: op
+  sticktp.use:
+    description: Allows teleporting with the magic stick.
+    default: true
