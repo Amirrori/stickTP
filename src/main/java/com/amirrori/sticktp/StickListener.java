@@ -1,4 +1,4 @@
-package sticktp.sticktp;
+package com.amirrori.sticktp;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -14,7 +14,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-public class tpCommand implements Listener {
+public class StickListener implements Listener {
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent e){
         ItemStack magicStick = new ItemStack(Material.STICK);

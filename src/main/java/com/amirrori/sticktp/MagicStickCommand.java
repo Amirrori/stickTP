@@ -1,4 +1,4 @@
-package sticktp.sticktp;
+package com.amirrori.sticktp;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -12,7 +12,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MagicStick implements CommandExecutor {
+public class MagicStickCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (sender instanceof Player) {
